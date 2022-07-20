@@ -27,7 +27,7 @@ const errorLink = onError(({ graphqlErrors, networkError }) => {
 
 const link = from([
   errorLink,
-  new HttpLink({ uri: "http://localhost:6969/graphql" }),
+  new HttpLink({ uri: "https://weatherback.azurewebsites.net/graphql" }),
 ]);
 
 const client = new ApolloClient({

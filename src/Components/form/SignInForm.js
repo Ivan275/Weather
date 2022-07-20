@@ -26,7 +26,7 @@ const LoginForm = ({handleSubmit, handleEmail, handlePassword, errors, ...props}
 				<FormRow>
 					<FormColumn small>
 						<FormTitle>Sign In</FormTitle>
-						<FormWrapper onSubmit={handleSubmit}>                       
+						<FormWrapper >                       
                             <FormInputRow>
                                 <FormLabel>Email</FormLabel>
                                 <FormInput 

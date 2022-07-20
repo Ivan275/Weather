@@ -26,7 +26,7 @@ const Form = ({handleSubmit, handleEmail, handlePassword, errors, ...props}) => 
 				<FormRow>
 					<FormColumn small>
 						<FormTitle>Sign Up</FormTitle>
-						<FormWrapper>
+						<FormWrapper onSubmit={handleSubmit}>
                             <FormInputRow>
                                 <FormLabel>First Name</FormLabel>
                                 <FormInput 
@@ -65,7 +65,7 @@ const Form = ({handleSubmit, handleEmail, handlePassword, errors, ...props}) => 
 									onChange={handlePassword}
                                 />
                             </FormInputRow>
-							<FormButton onClick={handleSubmit}>Sign Up</FormButton>
+							<FormButton type="submit" >Sign Up</FormButton>
 						</FormWrapper>
 						{errors && (
 							<FormMessage

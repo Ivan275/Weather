@@ -16,6 +16,7 @@ function SignUp() {
   const [createUser, { error }] = useMutation(CREATE_USER_MUTATION);
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     const response = await createUser({
       variables: {
@@ -25,12 +26,16 @@ function SignUp() {
         password: password,
       },
     });
+    e.target.reset();
+
     if(!response.data.createUser.id){
-      setSuccess("You have successfully sign up!")
+      setSuccess("You have successfully sign up!");
+      
     }
     if (error) {
       setErrors(error)
     }
+    
   };
 
   const handleEmail = (e) => {
